@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(find C:UsersFarukAhmedDocumentsitechnetronicsneurox-techwebsitewebsite-frontend-ui/src -type f \\\\\\(-name *.tsx -o -name *.ts \\\\\\))",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl -L -o \"src/assets/hero-image.jpg\" \"https://images.unsplash.com/photo-1733044625425-98cbd7514387?w=1200&q=80\")",
+      "Bash(curl -L -s -o \"src/assets/hero-image.jpg\" \"https://unsplash.com/photos/JR5NaQmOSqo/download?force=true\" -H \"User-Agent: Mozilla/5.0\")",
+      "Bash(curl -L -s -o \"src/assets/hero-image.jpg\" \"https://images.unsplash.com/photo-1733044625425-98cbd7514387?ixlib=rb-4.0.3&w=1200&q=80&fm=jpg\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\)\" --max-time 20)",
+      "Bash(curl -L -s -o \"src/assets/hero-image.jpg\" \"https://images.pexels.com/photos/30547618/pexels-photo-30547618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\)\" --max-time 30)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

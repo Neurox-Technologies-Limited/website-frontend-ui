@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 6% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 6% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 4% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 55%;
+
+    --accent: 180 80% 45%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 180 80% 45%;
+
+    --radius: 0px;
+
+    --sidebar-background: 240 6% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 180 80% 45%;
+    --sidebar-primary-foreground: 240 10% 3.9%;
+    --sidebar-accent: 240 4% 10%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 180 80% 45%;
+
+    /* Custom tokens */
+    --t5-red: 0 72% 51%;
+    --t5-cyan: 180 80% 45%;
+    --grid-color: 240 5% 55%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 10% 3.9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 240 10% 3.9%;
+
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 180 80% 35%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 85%;
+    --input: 240 6% 85%;
+    --ring: 180 80% 35%;
+
+    --radius: 0px;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 10% 3.9%;
+    --sidebar-primary: 180 80% 35%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 92%;
+    --sidebar-accent-foreground: 240 10% 3.9%;
+    --sidebar-border: 240 6% 85%;
+    --sidebar-ring: 180 80% 35%;
+
+    --t5-red: 0 72% 51%;
+    --t5-cyan: 180 80% 35%;
+    --grid-color: 240 5% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Baloo 2', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .section-spacing {
+    @apply py-[12vh] md:py-[15vh];
+  }
+
+  .container-custom {
+    @apply px-6 md:px-12 lg:px-24;
+  }
+
+  .grid-overlay {
+    /* grid background removed */
+  }
+
+  .service-card {
+    @apply relative border-l border-b border-muted p-8 transition-all duration-300;
+  }
+
+  .service-card:hover {
+    background: hsl(var(--foreground) / 0.03);
+    border-color: hsl(var(--accent));
+  }
+
+  .cta-button {
+    @apply h-12 px-6 bg-foreground text-background font-mono uppercase tracking-widest text-xs inline-flex items-center justify-center transition-transform duration-150 active:scale-[0.98];
+  }
+
+  .cta-button:hover {
+    background: hsl(var(--accent));
+    color: hsl(var(--background));
+  }
+
+  .cta-button-outline {
+    @apply h-12 px-6 border border-muted text-foreground font-mono uppercase tracking-widest text-xs inline-flex items-center justify-center transition-all duration-150 active:scale-[0.98];
+  }
+
+  .cta-button-outline:hover {
+    border-color: hsl(var(--accent));
+    color: hsl(var(--accent));
+  }
+
+  .label-tag {
+    @apply font-mono text-xs tracking-widest uppercase text-muted-foreground;
+  }
+
+  .accent-text {
+    color: hsl(var(--accent));
+  }
+
+  .t5-red {
+    color: hsl(var(--t5-red));
+  }
+}
