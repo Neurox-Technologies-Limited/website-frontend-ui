@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-image.jpg";
 
 const transition = { type: "spring" as const, duration: 0.8, bounce: 0 };
 
@@ -16,9 +15,9 @@ const itemVariants = {
 const HeroSection = () => {
   return (
     <section className="relative min-h-svh grid-overlay">
-      <div className="container-custom grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-svh pt-20">
+      <div className="container-custom flex items-center min-h-svh pt-20">
         <motion.div
-          className="lg:col-span-7 flex flex-col justify-center"
+          className="max-w-3xl flex flex-col justify-center"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -51,21 +50,6 @@ const HeroSection = () => {
             <a href="#services" className="cta-button">VIEW SPECS</a>
             <a href="#about" className="cta-button-outline">ABOUT US</a>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="lg:col-span-5 relative"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ ...transition, delay: 0.3 }}
-        >
-          <div className="relative aspect-[4/3] overflow-hidden border border-border">
-            <img src={heroImage} alt="Abstract digital technology network" className="w-full h-full object-cover" loading="eager" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            <div className="absolute bottom-4 left-4 font-mono text-[10px] text-muted-foreground">
-              <span className="accent-text">●</span> LIVE // NEUROX HQ
-            </div>
-          </div>
         </motion.div>
       </div>
 
