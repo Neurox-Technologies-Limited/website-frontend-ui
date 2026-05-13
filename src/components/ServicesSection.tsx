@@ -139,7 +139,6 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.04 }}
-              whileHover={{ y: -4 }}
             >
               <div className="flex items-start justify-between mb-6">
                 <span className="font-mono text-xs text-muted-foreground">
