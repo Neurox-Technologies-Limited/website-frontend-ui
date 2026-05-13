@@ -45,7 +45,7 @@ const HonkPage = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter leading-[0.9] uppercase">
               Honk
               <br />
-              <span className="accent-text">Roadside Assist</span>
+              <span className="gradient-text">Roadside Assist</span>
             </h1>
             <p className="mt-8 text-muted-foreground max-w-[60ch] text-base md:text-lg leading-relaxed">
               Launch your roadside assistance app quickly and effortlessly. A complete white-label solution with user app, service provider app, and admin panel — featuring real-time tracking, multiple payment options, and multi-language support.

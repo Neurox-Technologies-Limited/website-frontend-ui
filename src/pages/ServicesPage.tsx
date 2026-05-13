@@ -137,7 +137,7 @@ const ServicesPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            What We <span className="accent-text">Execute</span>
+            What We <span className="gradient-text">Execute</span>
           </motion.h1>
           <motion.p
             className="text-muted-foreground text-lg max-w-[60ch] mt-6"

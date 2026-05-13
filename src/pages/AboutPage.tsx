@@ -23,7 +23,7 @@ const AboutPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Who We <span className="accent-text">Are</span>
+            Who We <span className="gradient-text">Are</span>
           </motion.h1>
           <motion.p
             className="text-muted-foreground text-lg max-w-[60ch] mt-6"

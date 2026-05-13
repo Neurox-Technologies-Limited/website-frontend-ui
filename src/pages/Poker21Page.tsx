@@ -45,7 +45,7 @@ const Poker21Page = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter leading-[0.9] uppercase">
               Poker 21
               <br />
-              <span className="accent-text">(Cashie)</span>
+              <span className="gradient-text">(Cashie)</span>
             </h1>
             <p className="mt-8 text-muted-foreground max-w-[60ch] text-base md:text-lg leading-relaxed">
               A fully customizable white-label Whot card game platform with integrated digital wallet system. Launch your own real-money card gaming platform with our production-ready solution featuring multiplayer rooms, tournaments, and a comprehensive agent system.
