@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Cloud, Shield, Code } from "lucide-react";
 import { CapabilityCard } from "@/components/ui/CapabilityCard";
@@ -11,6 +11,7 @@ const capabilities = [
 ];
 
 const HeroSection = () => {
+  const reduceMotion = useReducedMotion();
   return (
     <section className="relative min-h-[85svh] flex items-center pt-28 pb-16 gradient-mesh-bg overflow-hidden">
       <div className="container-custom w-full">
@@ -76,8 +77,8 @@ const HeroSection = () => {
         <span className="font-mono text-[10px] text-muted-foreground tracking-widest">SCROLL</span>
         <motion.div
           className="w-px h-8 bg-muted-foreground/30"
-          animate={{ scaleY: [1, 0.5, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          animate={reduceMotion ? undefined : { scaleY: [1, 0.5, 1] }}
+          transition={reduceMotion ? undefined : { duration: 2, repeat: Infinity }}
         />
       </motion.div>
     </section>

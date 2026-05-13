@@ -38,7 +38,7 @@ export const CapabilityCard = ({ icon: Icon, title, subtitle, className }: Capab
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
     >
-      <div className="w-10 h-10 rounded-md bg-[hsl(var(--accent)/0.12)] border border-[hsl(var(--accent)/0.2)] flex items-center justify-center mb-4">
+      <div aria-hidden="true" className="w-10 h-10 rounded-md bg-[hsl(var(--accent)/0.12)] border border-[hsl(var(--accent)/0.2)] flex items-center justify-center mb-4">
         <Icon className="w-5 h-5 text-accent" />
       </div>
       <h3 className="font-sans text-base font-semibold mb-1">{title}</h3>
