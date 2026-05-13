@@ -108,7 +108,12 @@ const ServicesSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="section-spacing border-t border-border grid-overlay" ref={ref}>
+    <section id="services" className="section-spacing border-t border-border relative overflow-hidden" ref={ref}>
+      <div
+        aria-hidden
+        className="absolute top-0 right-0 w-[600px] h-[600px] -translate-y-1/4 translate-x-1/4 rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, hsl(var(--accent) / 0.08) 0%, transparent 60%)" }}
+      />
       <div className="container-custom">
         <motion.span
           className="label-tag"
@@ -123,10 +128,10 @@ const ServicesSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          What We <span className="accent-text">Execute</span>
+          What We <span className="gradient-text">Execute</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 relative">
           {services.map((service, i) => (
             <motion.div
               key={service.num}

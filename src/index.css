@@ -149,12 +149,16 @@
   }
 
   .service-card {
-    @apply relative border-l border-b border-muted p-8 transition-all duration-300;
+    @apply relative p-8 transition-all duration-300 rounded-md border;
+    border-color: hsl(var(--border) / 0.5);
+    background: hsl(var(--card) / 0.4);
   }
 
   .service-card:hover {
-    background: hsl(var(--foreground) / 0.03);
-    border-color: hsl(var(--accent));
+    background: hsl(var(--card) / 0.7);
+    border-color: hsl(var(--accent) / 0.4);
+    box-shadow: 0 8px 24px -12px hsl(var(--accent) / 0.25);
+    transform: translateY(-4px);
   }
 
   .cta-button {
