@@ -186,4 +186,83 @@
   .t5-red {
     color: hsl(var(--t5-red));
   }
+
+  .glass {
+    background: hsl(var(--card) / 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--foreground) / 0.08);
+  }
+
+  .light .glass {
+    background: hsl(0 0% 100% / 0.6);
+    border: 1px solid hsl(var(--foreground) / 0.05);
+  }
+
+  @supports not (backdrop-filter: blur(1px)) {
+    .glass { background: hsl(var(--card) / 0.95); }
+    .light .glass { background: hsl(0 0% 100% / 0.95); }
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-2)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @supports not (background-clip: text) {
+    .gradient-text { color: hsl(var(--accent)); -webkit-text-fill-color: currentColor; }
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-2)) 100%);
+    color: hsl(var(--accent-foreground));
+  }
+
+  .gradient-hairline {
+    background: linear-gradient(90deg, transparent 0%, hsl(var(--accent) / 0.3) 30%, hsl(var(--accent-2) / 0.3) 70%, transparent 100%);
+    height: 1px;
+  }
+
+  .gradient-mesh-bg {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .gradient-mesh-bg::before,
+  .gradient-mesh-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .gradient-mesh-bg::before {
+    background:
+      radial-gradient(circle at 20% 25%, hsl(var(--accent) / var(--mesh-opacity)) 0%, transparent 45%),
+      radial-gradient(circle at 80% 75%, hsl(var(--accent-2) / var(--mesh-opacity)) 0%, transparent 45%);
+    animation: mesh-drift 40s ease-in-out infinite;
+  }
+
+  .gradient-mesh-bg::after {
+    background-image:
+      linear-gradient(hsl(var(--foreground) / var(--grid-opacity)) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--foreground) / var(--grid-opacity)) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+  }
+
+  @keyframes mesh-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    33% { transform: translate3d(3%, -2%, 0) scale(1.05); }
+    66% { transform: translate3d(-2%, 3%, 0) scale(0.98); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-mesh-bg::before { animation: none; }
+  }
 }
