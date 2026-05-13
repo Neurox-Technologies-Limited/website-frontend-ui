@@ -40,7 +40,7 @@ const PartnersPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Our <span className="accent-text">Ecosystem</span>
+            Our <span className="gradient-text">Ecosystem</span>
           </motion.h1>
           <motion.p
             className="text-muted-foreground text-lg max-w-[60ch] mt-6"

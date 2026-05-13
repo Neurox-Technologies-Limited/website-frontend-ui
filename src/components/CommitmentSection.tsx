@@ -6,7 +6,8 @@ const CommitmentSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-spacing border-t border-border" ref={ref}>
+    <section className="section-spacing border-t border-border relative overflow-hidden" ref={ref}>
+      <div aria-hidden className="gradient-hairline absolute top-0 left-0 right-0" />
       <div className="container-custom grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-7">
           <motion.span
@@ -24,7 +25,7 @@ const CommitmentSection = () => {
           >
             Our Commitment
             <br />
-            to <span className="accent-text">Excellence</span>
+            to <span className="gradient-text">Excellence</span>
           </motion.h2>
           <motion.p
             className="text-muted-foreground text-lg leading-relaxed max-w-[55ch] mt-6"
@@ -39,12 +40,12 @@ const CommitmentSection = () => {
           </motion.p>
           <motion.a
             href="#contact"
-            className="cta-button mt-8 inline-flex"
+            className="gradient-cta h-12 px-6 mt-8 rounded-md font-sans text-sm font-medium inline-flex items-center justify-center w-fit transition-transform active:scale-[0.98]"
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.4 }}
           >
-            EXECUTE PARTNERSHIP
+            Execute Partnership
           </motion.a>
         </div>
 
@@ -61,7 +62,7 @@ const CommitmentSection = () => {
                   key={label}
                   className="bg-background p-8 flex flex-col items-start justify-end aspect-square"
                 >
-                  <span className="font-mono text-[40px] font-semibold accent-text leading-none">
+                  <span className="font-mono text-[40px] font-semibold leading-none" style={{ color: "hsl(var(--accent-2))" }}>
                     0{i + 1}
                   </span>
                   <span className="font-mono text-[10px] tracking-widest text-muted-foreground mt-3">

@@ -46,7 +46,7 @@ const LaundromartPage = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter leading-[0.9] uppercase">
               Laundromart
               <br />
-              <span className="accent-text">Laundry Delivery</span>
+              <span className="gradient-text">Laundry Delivery</span>
             </h1>
             <p className="mt-8 text-muted-foreground max-w-[60ch] text-base md:text-lg leading-relaxed">
               Launch your on-demand laundry service app quickly and effortlessly. A complete four-sided marketplace solution with user app, store panel, delivery partner app, and admin dashboard — ready for white-labeling and customization.
