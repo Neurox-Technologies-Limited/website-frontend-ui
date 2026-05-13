@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border py-12">
+    <footer className="border-t border-border py-12 relative">
+      <div aria-hidden className="gradient-hairline absolute top-0 left-0 right-0" />
       <div className="container-custom grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-3">
           <Link to="/" className="inline-block">
@@ -38,7 +39,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="md:col-span-3">
+        <div className="md:col-span-2">
           <span className="label-tag block mb-4">PRODUCTS</span>
           <Link to="/products/poker-21" className="block text-xs text-muted-foreground hover:text-foreground transition-colors mb-2">
             POKER 21 (CASHIE)
@@ -51,19 +52,32 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="md:col-span-4">
+        <div className="md:col-span-3">
+          <span className="label-tag block mb-4">GET IN TOUCH</span>
+          <a
+            href="mailto:info@neuroxtech.com"
+            className="block text-xs text-muted-foreground hover:text-foreground transition-colors mb-2"
+          >
+            info@neuroxtech.com
+          </a>
+          <a
+            href="tel:+2348184733736"
+            className="block text-xs text-muted-foreground hover:text-foreground transition-colors mb-2"
+          >
+            +234 818 473 3736
+          </a>
+        </div>
+
+        <div className="md:col-span-2">
           <span className="label-tag block mb-4">SYSTEM STATUS</span>
           <div className="flex items-center gap-2 mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             <span className="text-xs text-muted-foreground">
-              ALL SYSTEMS OPERATIONAL
+              OPERATIONAL
             </span>
           </div>
           <span className="text-xs text-muted-foreground block mb-1">
             LATENCY: 24ms
-          </span>
-          <span className="text-xs text-muted-foreground block">
-            GLOBAL NODES: ACTIVE
           </span>
         </div>
       </div>
