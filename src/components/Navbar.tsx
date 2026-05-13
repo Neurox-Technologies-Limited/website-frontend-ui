@@ -59,8 +59,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : ""
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md ${
+        scrolled ? "bg-background/95 border-b border-border" : "bg-background/40"
       }`}
     >
       <div className="container-custom flex items-center justify-between h-16">
@@ -145,8 +145,11 @@ const Navbar = () => {
               SYS: OPERATIONAL
             </span>
           </div>
-          <Link to="/contact" className="cta-button text-[10px]">
-            INITIALIZE CONTACT
+          <Link
+            to="/contact"
+            className="gradient-cta h-9 px-5 rounded-md font-sans text-xs font-medium inline-flex items-center justify-center transition-transform active:scale-[0.98]"
+          >
+            Contact Us
           </Link>
         </div>
 
@@ -224,8 +227,12 @@ const Navbar = () => {
                 )}
               </AnimatePresence>
 
-              <Link to="/contact" onClick={() => setMobileOpen(false)} className="cta-button text-[10px] w-fit mt-2">
-                INITIALIZE CONTACT
+              <Link
+                to="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="gradient-cta h-10 px-5 rounded-md font-sans text-xs font-medium inline-flex items-center justify-center w-fit mt-2 transition-transform active:scale-[0.98]"
+              >
+                Contact Us
               </Link>
             </div>
           </motion.div>
