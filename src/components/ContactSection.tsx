@@ -6,7 +6,7 @@ const ContactSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="section-spacing border-t border-border grid-overlay" ref={ref}>
+    <section id="contact" className="section-spacing border-t border-border gradient-mesh-bg" ref={ref}>
       <div className="container-custom grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-6">
           <motion.span
@@ -24,7 +24,7 @@ const ContactSection = () => {
           >
             Ready to
             <br />
-            <span className="accent-text">Execute?</span>
+            <span className="gradient-text">Execute?</span>
           </motion.h2>
           <motion.p
             className="text-muted-foreground mt-6 max-w-[40ch]"
@@ -43,13 +43,13 @@ const ContactSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <form className="space-y-6">
+          <form className="glass rounded-lg p-8 space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="label-tag block mb-2">NAME</label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-border py-3 text-foreground font-mono text-sm focus:outline-none focus:border-accent transition-colors"
+                  className="w-full bg-transparent border-b border-border py-3 text-foreground font-sans text-sm focus:outline-none focus:border-accent transition-colors"
                   placeholder="John Doe"
                 />
               </div>
@@ -57,7 +57,7 @@ const ContactSection = () => {
                 <label className="label-tag block mb-2">EMAIL</label>
                 <input
                   type="email"
-                  className="w-full bg-transparent border-b border-border py-3 text-foreground font-mono text-sm focus:outline-none focus:border-accent transition-colors"
+                  className="w-full bg-transparent border-b border-border py-3 text-foreground font-sans text-sm focus:outline-none focus:border-accent transition-colors"
                   placeholder="john@company.com"
                 />
               </div>
@@ -66,7 +66,7 @@ const ContactSection = () => {
               <label className="label-tag block mb-2">ORGANIZATION</label>
               <input
                 type="text"
-                className="w-full bg-transparent border-b border-border py-3 text-foreground font-mono text-sm focus:outline-none focus:border-accent transition-colors"
+                className="w-full bg-transparent border-b border-border py-3 text-foreground font-sans text-sm focus:outline-none focus:border-accent transition-colors"
                 placeholder="Company name"
               />
             </div>
@@ -74,12 +74,15 @@ const ContactSection = () => {
               <label className="label-tag block mb-2">MESSAGE</label>
               <textarea
                 rows={4}
-                className="w-full bg-transparent border-b border-border py-3 text-foreground font-mono text-sm focus:outline-none focus:border-accent transition-colors resize-none"
+                className="w-full bg-transparent border-b border-border py-3 text-foreground font-sans text-sm focus:outline-none focus:border-accent transition-colors resize-none"
                 placeholder="Describe your infrastructure requirements..."
               />
             </div>
-            <button type="submit" className="cta-button">
-              TRANSMIT REQUEST
+            <button
+              type="submit"
+              className="gradient-cta h-12 px-6 rounded-md font-sans text-sm font-medium inline-flex items-center justify-center transition-transform active:scale-[0.98]"
+            >
+              Transmit Request
             </button>
           </form>
         </motion.div>
