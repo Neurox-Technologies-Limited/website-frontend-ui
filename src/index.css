@@ -34,7 +34,11 @@
     --input: 240 4% 16%;
     --ring: 180 80% 45%;
 
-    --radius: 0px;
+    --accent-2: 265 85% 65%;
+    --accent-2-foreground: 0 0% 98%;
+
+    --radius: 8px;
+    --radius-lg: 16px;
 
     --sidebar-background: 240 6% 6%;
     --sidebar-foreground: 0 0% 98%;
@@ -49,6 +53,10 @@
     --t5-red: 0 72% 51%;
     --t5-cyan: 180 80% 45%;
     --grid-color: 240 5% 55%;
+
+    --mesh-opacity: 0.25;
+    --grid-opacity: 0.05;
+    --noise-opacity: 0.03;
   }
 
   .light {
@@ -80,7 +88,11 @@
     --input: 240 6% 85%;
     --ring: 180 80% 35%;
 
-    --radius: 0px;
+    --accent-2: 265 75% 55%;
+    --accent-2-foreground: 0 0% 98%;
+
+    --radius: 8px;
+    --radius-lg: 16px;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 10% 3.9%;
@@ -94,6 +106,10 @@
     --t5-red: 0 72% 51%;
     --t5-cyan: 180 80% 35%;
     --grid-color: 240 5% 46%;
+
+    --mesh-opacity: 0.15;
+    --grid-opacity: 0.04;
+    --noise-opacity: 0.025;
   }
 }
 
