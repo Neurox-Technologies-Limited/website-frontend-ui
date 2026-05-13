@@ -22,7 +22,7 @@ const ContactPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Ready to <span className="accent-text">Execute?</span>
+            Ready to <span className="gradient-text">Execute?</span>
           </motion.h1>
           <motion.p
             className="text-muted-foreground text-lg max-w-[60ch] mt-6"
@@ -58,8 +58,25 @@ const ContactPage = () => {
                 <div className="flex items-start gap-4">
                   <Phone className="w-5 h-5 text-accent mt-0.5" />
                   <div>
-                    <span className="text-sm font-semibold block">Phone</span>
-                    <span className="text-sm text-muted-foreground">+234 (0) 1 234 5678</span>
+                    <span className="text-sm font-semibold block mb-1">Phone</span>
+                    <div className="flex items-center gap-2">
+                      <a
+                        href="tel:+2348184733736"
+                        className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        +234 818 473 3736
+                      </a>
+                      <span className="font-mono text-[10px] text-muted-foreground/70 uppercase tracking-widest">primary</span>
+                    </div>
+                    <div className="flex items-center gap-2 mt-1">
+                      <a
+                        href="tel:+2348144488577"
+                        className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        +234 814 448 8577
+                      </a>
+                      <span className="font-mono text-[10px] text-muted-foreground/70 uppercase tracking-widest">secondary</span>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
