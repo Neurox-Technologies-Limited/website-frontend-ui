@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Spade, CreditCard, Users, Shield, Smartphone, Globe, Zap, BarChart3, ArrowLeft } from "lucide-react";
+import { IMAGES, onImgError } from "@/lib/images";
 
 const features = [
   { icon: Spade, title: "Whot Card Game Engine", desc: "Full-featured Whot card game with real-time multiplayer, automated dealing, and rule enforcement." },
@@ -53,6 +54,15 @@ const Poker21Page = () => {
             <div className="flex gap-4 mt-10">
               <a href="#contact" className="cta-button">REQUEST DEMO</a>
               <a href="#features" className="cta-button-outline">VIEW FEATURES</a>
+            </div>
+
+            <div className="media-frame aspect-[16/8] mt-12 max-w-3xl">
+              <img
+                src={IMAGES.mobileApps}
+                onError={onImgError}
+                loading="lazy"
+                alt="Poker 21 mobile gaming app"
+              />
             </div>
           </motion.div>
         </div>

@@ -60,16 +60,20 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md ${
-        scrolled ? "bg-background/95 border-b border-border" : "bg-background/40"
+        scrolled ? "bg-background/90 border-b border-border" : "bg-background/40"
       }`}
     >
       <div className="container-custom flex items-center justify-between h-16">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <span className="font-bold text-xl tracking-tighter text-foreground">
-            Neuro<span className="t5-red">x</span>
-          </span>
-          <span className="font-mono text-[10px] text-muted-foreground tracking-widest hidden sm:block">
+        <Link to="/" className="flex items-center gap-2.5">
+          <img
+            src="/neurox.png"
+            alt="Neurox Technologies"
+            className="h-10 w-auto md:h-11"
+            width={44}
+            height={44}
+          />
+          <span className="hidden sm:block font-sans text-[11px] font-medium text-muted-foreground tracking-[0.18em]">
             TECHNOLOGIES
           </span>
         </Link>
@@ -80,7 +84,7 @@ const Navbar = () => {
             <Link
               key={link.label}
               to={link.href}
-              className="font-mono text-xs tracking-widest text-muted-foreground hover:text-foreground transition-colors"
+              className="text-xs font-semibold tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
             </Link>
@@ -90,7 +94,7 @@ const Navbar = () => {
           <div ref={megaRef} className="relative">
             <button
               onClick={() => setProductsOpen(!productsOpen)}
-              className="font-mono text-xs tracking-widest text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
+              className="text-xs font-semibold tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
             >
               PRODUCTS
               <ChevronDown className={`w-3 h-3 transition-transform ${productsOpen ? "rotate-180" : ""}`} />
@@ -103,7 +107,7 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full right-0 mt-4 w-[560px] bg-card border border-border shadow-2xl p-6"
+                  className="absolute top-full right-0 mt-4 w-[560px] bg-card border border-border rounded-2xl shadow-2xl p-6"
                 >
                   <span className="label-tag block mb-4">WHITE LABEL PRODUCTS</span>
                   <div className="grid grid-cols-1 gap-2">
@@ -112,9 +116,9 @@ const Navbar = () => {
                         key={product.name}
                         to={product.href}
                         onClick={() => setProductsOpen(false)}
-                        className="flex items-start gap-4 p-4 hover:bg-muted/50 transition-colors group"
+                        className="flex items-start gap-4 p-4 rounded-xl hover:bg-muted/60 transition-colors group"
                       >
-                        <div className="w-10 h-10 border border-border flex items-center justify-center shrink-0 group-hover:border-accent transition-colors">
+                        <div className="w-10 h-10 rounded-xl border border-border flex items-center justify-center shrink-0 group-hover:border-accent transition-colors">
                           <product.icon className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors" />
                         </div>
                         <div>
@@ -141,13 +145,13 @@ const Navbar = () => {
           </button>
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            <span className="font-mono text-[10px] text-muted-foreground">
+            <span className="text-[10px] font-medium text-muted-foreground tracking-wide">
               SYS: OPERATIONAL
             </span>
           </div>
           <Link
             to="/contact"
-            className="gradient-cta h-9 px-5 rounded-md font-sans text-xs font-medium inline-flex items-center justify-center transition-transform active:scale-[0.98]"
+            className="gradient-cta h-9 px-5 rounded-xl text-xs font-semibold inline-flex items-center justify-center transition-transform active:scale-[0.98]"
           >
             Contact Us
           </Link>
@@ -165,6 +169,7 @@ const Navbar = () => {
           <button
             className="text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
           >
             <div className="space-y-1.5">
               <span className={`block w-6 h-px bg-foreground transition-transform ${mobileOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
@@ -190,7 +195,7 @@ const Navbar = () => {
                   key={link.label}
                   to={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-mono text-sm tracking-widest text-muted-foreground hover:text-foreground"
+                  className="text-sm font-semibold tracking-[0.15em] text-muted-foreground hover:text-foreground"
                 >
                   {link.label}
                 </Link>
@@ -199,7 +204,7 @@ const Navbar = () => {
               {/* Mobile Products Accordion */}
               <button
                 onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                className="font-mono text-sm tracking-widest text-muted-foreground hover:text-foreground inline-flex items-center gap-1 w-fit"
+                className="text-sm font-semibold tracking-[0.15em] text-muted-foreground hover:text-foreground inline-flex items-center gap-1 w-fit"
               >
                 PRODUCTS
                 <ChevronDown className={`w-3 h-3 transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`} />
@@ -230,7 +235,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="gradient-cta h-10 px-5 rounded-md font-sans text-xs font-medium inline-flex items-center justify-center w-fit mt-2 transition-transform active:scale-[0.98]"
+                className="gradient-cta h-10 px-5 rounded-xl text-xs font-semibold inline-flex items-center justify-center w-fit mt-2 transition-transform active:scale-[0.98]"
               >
                 Contact Us
               </Link>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Shirt, Search, CreditCard, Bell, Truck, Store, Clock, BarChart3, ArrowLeft } from "lucide-react";
+import { IMAGES, onImgError } from "@/lib/images";
 
 const features = [
   { icon: Search, title: "Advanced Search Filters", desc: "Filter by price range, laundry categories, and location to find the perfect laundry store nearby." },
@@ -54,6 +55,15 @@ const LaundromartPage = () => {
             <div className="flex gap-4 mt-10">
               <a href="#contact" className="cta-button">REQUEST DEMO</a>
               <a href="#features" className="cta-button-outline">VIEW FEATURES</a>
+            </div>
+
+            <div className="media-frame aspect-[16/8] mt-12 max-w-3xl">
+              <img
+                src={IMAGES.mobileApps}
+                onError={onImgError}
+                loading="lazy"
+                alt="Laundromart on-demand laundry app"
+              />
             </div>
           </motion.div>
         </div>

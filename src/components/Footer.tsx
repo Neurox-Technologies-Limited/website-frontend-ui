@@ -6,12 +6,21 @@ const Footer = () => {
       <div aria-hidden className="gradient-hairline absolute top-0 left-0 right-0" />
       <div className="container-custom grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-3">
-          <Link to="/" className="inline-block">
-            <span className="font-bold text-xl tracking-tighter text-foreground">
-              Neuro<span className="t5-red">x</span>
-            </span>
-            <span className="text-[10px] text-muted-foreground tracking-widest ml-2">
-              TECHNOLOGIES
+          <Link to="/" className="inline-flex items-center gap-2.5">
+            <img
+              src="/neurox.png"
+              alt="Neurox Technologies"
+              className="h-9 w-auto"
+              width={36}
+              height={36}
+            />
+            <span className="flex flex-col leading-none">
+              <span className="font-bold text-lg tracking-tight text-foreground">
+                Neuro<span className="t5-red">x</span>
+              </span>
+              <span className="text-[9px] text-muted-foreground tracking-[0.25em] mt-0.5">
+                TECHNOLOGIES
+              </span>
             </span>
           </Link>
           <p className="text-muted-foreground text-sm mt-4 max-w-[30ch]">

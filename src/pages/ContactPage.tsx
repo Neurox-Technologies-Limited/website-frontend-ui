@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { IMAGES, onImgError } from "@/lib/images";
 
 const ContactPage = () => {
   return (
@@ -96,6 +97,15 @@ const ContactPage = () => {
                 <span className="text-xs text-muted-foreground">ALL SYSTEMS OPERATIONAL</span>
               </div>
               <span className="text-xs text-muted-foreground block">RESPONSE TIME: &lt; 24 HOURS</span>
+            </div>
+
+            <div className="media-frame aspect-[4/3]">
+              <img
+                src={IMAGES.office}
+                onError={onImgError}
+                loading="lazy"
+                alt="Neurox Technologies office"
+              />
             </div>
           </motion.div>
 
