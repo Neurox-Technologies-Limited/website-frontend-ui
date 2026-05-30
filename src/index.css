@@ -14,7 +14,7 @@
     --popover: 222 40% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 217 91% 60%;
+    --primary: 4 90% 62%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 222 30% 14%;
@@ -23,7 +23,7 @@
     --muted: 222 25% 16%;
     --muted-foreground: 220 14% 68%;
 
-    --accent: 217 91% 60%;
+    --accent: 4 90% 62%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -31,9 +31,9 @@
 
     --border: 222 24% 18%;
     --input: 222 24% 18%;
-    --ring: 217 91% 60%;
+    --ring: 4 90% 62%;
 
-    --accent-2: 243 75% 66%;
+    --accent-2: 14 90% 62%;
     --accent-2-foreground: 0 0% 100%;
 
     --radius: 12px;
@@ -41,16 +41,16 @@
 
     --sidebar-background: 222 40% 8%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary: 4 90% 62%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 222 30% 14%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 222 24% 18%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-ring: 4 90% 62%;
 
     /* Custom tokens */
     --t5-red: 0 84% 62%;
-    --t5-cyan: 217 91% 60%;
+    --t5-cyan: 4 90% 62%;
     --grid-color: 220 14% 68%;
 
     --mesh-opacity: 0.18;
@@ -69,7 +69,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 32% 12%;
 
-    --primary: 221 83% 53%;
+    --primary: 4 78% 53%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 16% 96%;
@@ -78,7 +78,7 @@
     --muted: 220 16% 96%;
     --muted-foreground: 220 10% 42%;
 
-    --accent: 221 83% 53%;
+    --accent: 4 78% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 58%;
@@ -86,9 +86,9 @@
 
     --border: 220 16% 90%;
     --input: 220 16% 90%;
-    --ring: 221 83% 53%;
+    --ring: 4 78% 53%;
 
-    --accent-2: 243 75% 59%;
+    --accent-2: 12 83% 56%;
     --accent-2-foreground: 0 0% 100%;
 
     --radius: 12px;
@@ -96,15 +96,15 @@
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 222 32% 12%;
-    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary: 4 78% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 16% 96%;
     --sidebar-accent-foreground: 222 32% 18%;
     --sidebar-border: 220 16% 90%;
-    --sidebar-ring: 221 83% 53%;
+    --sidebar-ring: 4 78% 53%;
 
     --t5-red: 0 72% 51%;
-    --t5-cyan: 221 83% 53%;
+    --t5-cyan: 4 78% 53%;
     --grid-color: 220 10% 50%;
 
     --mesh-opacity: 0.10;

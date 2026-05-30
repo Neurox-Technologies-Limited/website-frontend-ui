@@ -69,17 +69,12 @@ const Navbar = () => {
           <img
             src="/neurox.png"
             alt="Neurox Technologies"
-            className="h-9 w-auto"
-            width={36}
-            height={36}
+            className="h-10 w-auto md:h-11"
+            width={44}
+            height={44}
           />
-          <span className="hidden sm:flex flex-col leading-none">
-            <span className="font-bold text-lg tracking-tight text-foreground">
-              Neuro<span className="t5-red">x</span>
-            </span>
-            <span className="text-[9px] text-muted-foreground tracking-[0.25em] mt-0.5">
-              TECHNOLOGIES
-            </span>
+          <span className="hidden sm:block font-sans text-[11px] font-medium text-muted-foreground tracking-[0.18em]">
+            TECHNOLOGIES
           </span>
         </Link>
 
