@@ -64,7 +64,7 @@ Refine `src/index.css` variables for both themes:
 
 - Navbar: replace text-only wordmark with `<img src="/neurox.png">` (+ keep the
   "Neurox Technologies" text lockup for clarity). Footer: same logo.
-- `index.html`: favicon → `/neurox.png`; set og/twitter image to the logo;
+- `index.html`: favicon → `/favicon.png`; set og/twitter image to the logo;
   remove stale Lovable-signed OG URLs and the `@Lovable` twitter handle.
 
 ## Imagery placement
