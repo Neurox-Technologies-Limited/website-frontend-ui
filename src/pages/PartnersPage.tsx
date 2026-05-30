@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { IMAGES, onImgError } from "@/lib/images";
 
 const partnerCategories = [
   {
@@ -51,6 +52,19 @@ const PartnersPage = () => {
             Strategic partnerships with leading OEMs and technology providers,
             ensuring our clients benefit from the best solutions available.
           </motion.p>
+          <motion.div
+            className="media-frame aspect-[16/7] mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            <img
+              src={IMAGES.meeting}
+              onError={onImgError}
+              loading="lazy"
+              alt="Strategic technology partnership meeting"
+            />
+          </motion.div>
         </div>
       </section>
 

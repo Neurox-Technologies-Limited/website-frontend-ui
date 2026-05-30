@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 import { motion } from "framer-motion";
+import { IMAGES, onImgError } from "@/lib/images";
 
 const AboutPage = () => {
   return (
@@ -35,6 +36,19 @@ const AboutPage = () => {
             delivering exceptional solutions powered by strong OEM partnerships
             and cutting-edge technology.
           </motion.p>
+          <motion.div
+            className="media-frame aspect-[16/7] mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            <img
+              src={IMAGES.office}
+              onError={onImgError}
+              loading="lazy"
+              alt="Neurox Technologies modern workplace"
+            />
+          </motion.div>
         </div>
       </section>
 

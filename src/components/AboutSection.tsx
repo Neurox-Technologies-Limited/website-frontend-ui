@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { IMAGES, onImgError } from "@/lib/images";
 
 const stats = [
   { value: "99.99%", label: "UPTIME SLA" },
@@ -35,6 +36,20 @@ const AboutSection = () => {
             <br />
             <span className="accent-text">Technology</span>
           </motion.h2>
+
+          <motion.div
+            className="media-frame aspect-[4/5] mt-10 hidden lg:block"
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <img
+              src={IMAGES.team}
+              onError={onImgError}
+              loading="lazy"
+              alt="Neurox engineering team collaborating"
+            />
+          </motion.div>
         </div>
 
         <div className="lg:col-span-7">

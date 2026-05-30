@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { IMAGES, onImgError } from "@/lib/images";
 import { Server, Cloud, Database, Headphones, Shield, Code, Cog, Lightbulb, Palette, GraduationCap, Cpu, LineChart, ShoppingCart, RefreshCw } from "lucide-react";
 
 const services = [
@@ -148,6 +149,19 @@ const ServicesPage = () => {
             Enterprise-grade technology services designed to architect, deploy,
             and maintain infrastructure that drives business success.
           </motion.p>
+          <motion.div
+            className="media-frame aspect-[16/7] mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            <img
+              src={IMAGES.network}
+              onError={onImgError}
+              loading="lazy"
+              alt="Global network and cloud infrastructure"
+            />
+          </motion.div>
         </div>
       </section>
 

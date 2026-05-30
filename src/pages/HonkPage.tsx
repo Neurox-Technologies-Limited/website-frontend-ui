@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Car, MapPin, CreditCard, Bell, Star, Shield, Globe, Headphones, ArrowLeft } from "lucide-react";
+import { IMAGES, onImgError } from "@/lib/images";
 
 const features = [
   { icon: Car, title: "Find the Service", desc: "Search for popular service categories and specific categories effortlessly using the intuitive search page." },
@@ -53,6 +54,15 @@ const HonkPage = () => {
             <div className="flex gap-4 mt-10">
               <a href="#contact" className="cta-button">REQUEST DEMO</a>
               <a href="#features" className="cta-button-outline">VIEW FEATURES</a>
+            </div>
+
+            <div className="media-frame aspect-[16/8] mt-12 max-w-3xl">
+              <img
+                src={IMAGES.mobileApps}
+                onError={onImgError}
+                loading="lazy"
+                alt="Honk roadside assistance mobile app"
+              />
             </div>
           </motion.div>
         </div>
